@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="47sp"
+        android:fontFamily="@font/anton"
+        android:gravity="center"
+        android:text="@string/received_data"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ListView
+            android:id="@+id/recive_message_list"
+            android:layout_width="match_parent"
+            android:layout_height="233dp"
+            android:background="@drawable/back_groud_list" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:layout_marginTop="0dp">
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="110dp"
+                android:text="Close App"
+                android:layout_marginLeft="160dp" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="150dp"
+                android:background="@color/black"
+                android:layout_marginLeft="140dp" />
+
+            <Button
+                android:id="@+id/buttonStop"
+                android:layout_width="119dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="70dp"
+                android:text="Stop Receiving"
+                android:layout_marginLeft="10dp" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="7dp"
+                android:text="clear List"
+                android:layout_marginLeft="160dp" />
+
+            <Button
+                android:id="@+id/btn_file_picker"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="59dp"
+                android:text="DBC File"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:ignore="MissingConstraints"
+                android:layout_marginLeft="160dp"/>
+
+            <Button
+                android:id="@+id/buttonStart"
+                android:layout_width="119dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/red"
+                android:text="Star Receiving" />
+            <Button
+                android:id="@+id/buttonSend"
+                android:layout_width="119dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="130dp"
+                android:backgroundTint="@color/red"
+                android:text="Send Message" />
+        </FrameLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

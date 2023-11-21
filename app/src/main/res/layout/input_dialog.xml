@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextCanId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CAN ID" />
+
+    <EditText
+        android:id="@+id/editTextCanDLC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CAN DLC" />
+
+    <EditText
+        android:id="@+id/editTextData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Data" />
+    <EditText
+        android:id="@+id/editTextCanRTR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CAN RTR" />
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:checkedButton="@id/radioButtonSTD"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonSTD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Standart CAN id" />
+
+        <RadioButton
+            android:id="@+id/radioButtonEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="External CAN id"
+            android:layout_marginLeft="30dp"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/buttonClearFields"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear" />
+</LinearLayout>
